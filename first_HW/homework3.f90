@@ -1,15 +1,17 @@
 program homework3
 
     integer i, factorial
-    real x, result, pre
+    real x, result, pre, tol
     
     x = 0.5
     result = 1.0
     pre = 1.0
+    tol = 0.0000001
+
 
     do i = 1, 10, 1
         result = result + ((-1)**i) * ((x)**(2*i)) / factorial(2*i)
-        if ((pre - result) < 0.000001) exit
+        if (abs(pre - result) < tol) exit
         pre = result
     enddo
 
