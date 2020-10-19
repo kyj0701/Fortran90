@@ -11,11 +11,12 @@ program homework3
 
     do i = 1, 10, 1
         result = result + ((-1)**i) * ((x)**(2*i)) / factorial(2*i)
+        write(*,"(F9.7)") result
         if (abs(pre - result) < tol) exit
         pre = result
     enddo
 
-    write(*,"(F9.7)") result
+    write(*,"(F10.7)") result
 
 end program homework3
 
